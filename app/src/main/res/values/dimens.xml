@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heart_margin">15dp</dimen>
+    <dimen name="buttonsMargin">20dp</dimen>
+    <dimen name="MatirxPadding">25dp</dimen>
+</resources>
