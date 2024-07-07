@@ -43,23 +43,81 @@
             app:srcCompat="@drawable/heart" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/GamePlayButton"
+    <!--score-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="Play!"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/score_margin"
+        android:layout_marginEnd="@dimen/score_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/score_text_size"
         android:textStyle="bold"
-        android:textSize="30sp"
-        android:backgroundTint="@color/PlayButtonColor"
+        tools:text="000" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/startMenuScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
         android:layout_centerInParent="true"
-        />
+        >
+
+        <!--Sensors Switch-->
+        <Switch
+            android:id="@+id/sensors_switch"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/score_text_size"
+            android:textStyle="bold"
+            android:text="Sensors mode!"
+            android:layout_gravity="center"
+            android:padding="@dimen/startMenuPadding"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:checked="false"
+            android:clickable="true"
+            android:background="#9C786C"/>
+
+        <!--Speed Switch-->
+        <Switch
+            android:id="@+id/speed_switch"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/score_text_size"
+            android:textStyle="bold"
+            android:text="Speed mode!"
+            android:layout_gravity="center"
+            android:padding="@dimen/startMenuPadding"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:checked="false"
+            android:clickable="true"
+            android:background="#9C786C"
+            android:layout_marginBottom="15dp"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/GamePlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:text="Play!"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:backgroundTint="@color/yellow"
+            android:padding="@dimen/startMenuPadding"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
     <!--matrix layout -->
     <GridLayout
         android:id="@+id/gridLayout"
-        android:columnCount="3"
-        android:rowCount="5"
+        android:columnCount="5"
+        android:rowCount="7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -120,13 +178,103 @@
             app:srcCompat="@drawable/asteroid"
             android:visibility="invisible"
             />
+        <ImageView
+            android:id="@+id/asteroid_05"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_06"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_00"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_01"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_02"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_03"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_04"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_05"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_06"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
 
         <ImageView
             android:id="@+id/alien0"
             app:layout_rowWeight="1"
             app:layout_columnWeight="1"
             android:layout_column="0"
-            android:layout_row="4"
+            android:layout_row="6"
             android:padding="@dimen/MatirxPadding"
             android:visibility="invisible"
             app:srcCompat="@drawable/alien_2_svgrepo_com" />
@@ -184,15 +332,105 @@
             app:srcCompat="@drawable/asteroid"
             android:visibility="invisible"
             />
+        <ImageView
+            android:id="@+id/asteroid_15"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_16"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="1"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_10"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_11"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_12"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_13"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_14"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_15"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_16"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
 
         <ImageView
             android:id="@+id/alien1"
             app:layout_rowWeight="1"
             app:layout_columnWeight="1"
             android:layout_column="1"
-            android:layout_row="4"
+            android:layout_row="6"
             android:padding="@dimen/MatirxPadding"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:srcCompat="@drawable/alien_2_svgrepo_com" />
 
         <!-- lane3 -->
@@ -249,13 +487,416 @@
             app:srcCompat="@drawable/asteroid"
             android:visibility="invisible"
             />
+        <ImageView
+            android:id="@+id/asteroid_25"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="2"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_26"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="2"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_20"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_21"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_22"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_23"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_24"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_25"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_26"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
 
         <ImageView
             android:id="@+id/alien2"
             app:layout_rowWeight="1"
             app:layout_columnWeight="1"
             android:layout_column="2"
+            android:layout_row="6"
+            android:visibility="visible"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/alien_2_svgrepo_com" />
+
+        <!-- lane4 -->
+        <ImageView
+            android:id="@+id/asteroid_30"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/asteroid_31"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/asteroid_32"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/asteroid_33"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/asteroid_34"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
             android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_35"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_36"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/coin_30"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_31"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_32"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_33"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_34"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_35"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_36"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="3"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/alien3"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="6"
+            android:visibility="invisible"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/alien_2_svgrepo_com" />
+
+
+        <!-- lane5 -->
+        <ImageView
+            android:id="@+id/asteroid_40"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/asteroid_41"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/asteroid_42"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/asteroid_43"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/asteroid_44"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_45"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/asteroid_46"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/asteroid"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/coin_40"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="0"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_41"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="1"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_42"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="2"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_43"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="3"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_44"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="4"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_45"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="5"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/coin_46"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_column="4"
+            android:layout_row="6"
+            android:padding="@dimen/MatirxPadding"
+            app:srcCompat="@drawable/coin"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/alien4"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="6"
             android:visibility="invisible"
             android:padding="@dimen/MatirxPadding"
             app:srcCompat="@drawable/alien_2_svgrepo_com" />

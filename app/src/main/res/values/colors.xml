@@ -3,5 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Button_color">#03A9F4</color>
-    <color name="PlayButtonColor">#FDD835</color>
+    <color name="yellow">#FDD835</color>
+    <color name="startMenuColor">#A98274</color>
 </resources>
